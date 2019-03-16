@@ -45,7 +45,7 @@ rpm_package './splunk-7.2.1-be11b2c46e23-linux-2.6-x86_64.rpm' do
 end
 
 firewalld_manager '8000/tcp' do
-  action :create
+  action :addport
   notifies :reload, 'firewalld_manager[reload]'
 end
 
